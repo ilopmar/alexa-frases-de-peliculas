@@ -1,15 +1,19 @@
+import com.amazonaws.services.lambda.model.Runtime
+import jp.classmethod.aws.gradle.lambda.AWSLambdaMigrateFunctionTask
+
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
         classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+        classpath 'jp.classmethod.aws:gradle-aws-plugin:0.22'
     }
 }
 
 apply plugin: 'groovy'
 apply plugin: 'com.github.johnrengelman.shadow'
-
+apply plugin: 'jp.classmethod.aws.lambda'
 
 group = 'quotes'
 version = '1.0'
@@ -41,14 +45,19 @@ task buildZip(type: Zip) {
     }
 }
 
-task fatJar(type: Jar) {
-    baseName = project.name + '-fat'
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-    with jar
+aws {
+    region = 'eu-west-1'
 }
+
+task deploy(type: AWSLambdaMigrateFunctionTask, dependsOn: build) {
+    functionName = "alexa-frases-peliculas"
+    handler = "quotes.QuotesStreamHandler"
+    role = "arn:aws:iam::${aws.accountId}:role/lambda_basic_execution"
+    runtime = Runtime.Java8
+    zipFile = shadowJar.archivePath
+    memorySize = 512
+    timeout = 60
+}
+
 build.dependsOn shadowJar
 
-shadowJar {
-    baseName = 'lambda-fat'
-    classifier = null
-}

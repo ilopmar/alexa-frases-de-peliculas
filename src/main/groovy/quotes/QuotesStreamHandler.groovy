@@ -25,8 +25,7 @@ class QuotesStreamHandler extends SkillStreamHandler {
                 new SessionEndedRequestHandler(),
                 new HelpIntentHandler()
             )
-        // Add your skill id below
-        //.withSkillId("amzn1.ask.skill.dd4beae0-67f1-4188-a5e4-945664207e3b")
+            .withSkillId("amzn1.ask.skill.dd4beae0-67f1-4188-a5e4-945664207e3b")
             .build();
     }
 
