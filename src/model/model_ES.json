@@ -1,0 +1,39 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "frases de peliculas",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "QuoteIntent",
+          "slots": [],
+          "samples": [
+            "dime una frase",
+            "dime una frase de película",
+            "dime una frase famosa",
+            "dime una frase famosa de película",
+            "cuéntame una frase",
+            "cuéntame una frase de película",
+            "cuéntame una frase famosa",
+            "cuéntame una frase famosa de película",
+            "cuéntame otra",
+            "dime otra frase",
+            "dime otra"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}
