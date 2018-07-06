@@ -11,7 +11,7 @@ buildscript {
     }
 }
 
-apply plugin: 'groovy'
+apply plugin: 'java'
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'jp.classmethod.aws.lambda'
 
@@ -28,8 +28,6 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.4.15'
-
     compile 'com.amazon.alexa:ask-sdk:2.3.4'
 
     compile 'log4j:log4j:1.2.17'

@@ -5,7 +5,12 @@
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "cancel",
+            "cancela",
+            "para",
+            "stop"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
@@ -13,7 +18,12 @@
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
+          "samples": [
+            "cancel",
+            "cancela",
+            "para",
+            "stop"
+          ]
         },
         {
           "name": "QuoteIntent",
