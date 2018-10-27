@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "frases de peliculas",
+      "invocationName": "frases de películas",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
