@@ -43,7 +43,7 @@ public class QuoteService {
             new Quote("El Mago de Oz", "Tengo el presentimiento de que ya no estamos en Kansas"),
             new Quote("El Graduado", "Señora Robinson, trata de seducirme... ¿no es así?"),
 //            new Quote("El Resplandor", "No voy a hacerte daño Wendy, sólo voy a arrancarte tu jodida cabeza"),
-            new Quote("Braveheart", "Nos podrán quitar la vida, pero jamás nos quitarán la ¡¡LIBERTAD...!!"),
+            new Quote("Braveheart", "Nos podrán quitar la vida, pero jamás nos quitarán la ¡LIBERTAD...!"),
 //            new Quote("La Jungla de Cristal", "Yipi-kay-yei... hijo de puta"),
             new Quote("Starwars", "Que la fuerza te acompañe"),
             new Quote("El Show de Truman", "Buenos días... y por si no volvemos a vernos: buenos días, buenas tardes y buenas noches"),
