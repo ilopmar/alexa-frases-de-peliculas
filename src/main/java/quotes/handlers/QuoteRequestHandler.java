@@ -26,8 +26,7 @@ public class QuoteRequestHandler implements RequestHandler {
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard(QuotesStreamHandler.SKILL_TITLE, speechText)
-                .withShouldEndSession(false)
-                .withReprompt("Pídeme si quieres otra frase.")
+                .withShouldEndSession(true)
                 .build();
     }
 }
